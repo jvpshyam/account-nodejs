@@ -9,6 +9,7 @@ import 'rxjs/Rx';
 let prettifyOrder = (order) => {
     let prettyOrder = {
         id: order.sfid,
+        orderid: order.order_id__c,
         name: order.name,
         amount: order.order_amount__c,
         currency: order.currency_code__c,

@@ -12,7 +12,8 @@ let prettifyOrderProduct = (orderProduct) => {
         name: orderProduct.name,
         unitPrice: orderProduct.unit_price__c,
         quantity: orderProduct.quantity__c,
-        listPrice: orderProuct.list_price__c
+        listPrice: orderProuct.list_price__c,
+        orderproductid: orderProduct.order_product_id__c
     };
     prettyOrderProduct.order = orderAccount.order__c_sfid ?
         {
