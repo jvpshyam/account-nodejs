@@ -1,0 +1,11 @@
+{
+  "name": "order-web-app",
+  "description": "Order Web App",
+  "keywords": [
+    "app-cloud"
+  ],
+  "repository": "https://github.com/jvpshyam/intro-to-heroku",
+  "addons": [
+    "heroku-postgresql"
+  ]
+}

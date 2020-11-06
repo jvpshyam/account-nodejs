@@ -1,0 +1,18 @@
+<ion-navbar primary *navbar>
+    <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Order-Product</ion-title>
+</ion-navbar>
+
+<ion-content>
+    <ion-list>
+        <button ion-item *ngFor="orders placed" (click)="itemTapped($event, orderproduct)">
+            <ion-thumbnail item-left>
+                <img src="{{property.thumbnail}}"/>
+            </ion-thumbnail>
+            <h2>{{orderproduct.id}}</h2>
+            <p>{{orderproduct.name}}, {{orderproduct.unitPrice}}</p>
+        </button>
+    </ion-list>
+</ion-content>
