@@ -26,15 +26,17 @@ var accountTable = 'account';
 // setup the demo data if needed
 client.query('SELECT * FROM salesforce.account', function(error, data) {
   if (error !== null) {
+    console.log('connectionurl'+ connectionString);
     client.query('SELECT * FROM account', function(error, data) {
       if (error !== null) {
-        //console.log('Loading Demo Data...');
+        console.log('Loading Demo Data...');
         //require('./db/demo.js')(client);
         //console.log('Done Loading Demo Data!');
       }
     });
   }
   else {
+    console.log('in else condition server.js...');
     var schema = 'salesforce.';
     orderTable = schema + 'order__c';
     accountTable = schema + 'account';
