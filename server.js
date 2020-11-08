@@ -26,7 +26,6 @@ var accountTable = 'account';
 // setup the demo data if needed
 client.query('SELECT * FROM salesforce.account', function(error, data) {
   if (error !== null) {
-    console.log('connectionurl'+ connectionString);
     client.query('SELECT * FROM account', function(error, data) {
       if (error !== null) {
         console.log('Loading Demo Data...');
@@ -37,6 +36,7 @@ client.query('SELECT * FROM salesforce.account', function(error, data) {
   }
   else {
     console.log('in else condition server.js...');
+    console.log('connectionurl'+ connectionString);
     var schema = 'salesforce.';
     orderTable = schema + 'order__c';
     accountTable = schema + 'account';
@@ -66,4 +66,4 @@ var port = process.env.PORT || 8200;
 
 app.listen(port);
 
-//console.log('Listening at: http://localhost:' + port);
+console.log('Listening at: http://localhost:' + port);
