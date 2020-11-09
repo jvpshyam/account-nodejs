@@ -1,6 +1,5 @@
 import {OnInit} from '@angular/core';
 import {Page, NavController, NavParams, Alert, ActionSheet} from 'ionic-angular';
-import {ProductDetailsPage} from '../product-details/product-details';
 import {ProductService} from '../../services/product-service';
 
 
@@ -22,11 +21,4 @@ export class ProductDetailsPage {
     ngOnInit() {
         this.productService.findById(this.product.id).subscribe(product => this.product = product);
     }
-
-    showAccount(event, product) {
-        this.nav.push(ProductDetailsPage, {
-            product: product
-        });
-    }
-
 }
