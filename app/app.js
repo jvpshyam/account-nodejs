@@ -3,10 +3,11 @@ import {HTTP_PROVIDERS} from '@angular/http';
 import {App, Platform} from 'ionic-angular';
 
 import {WelcomePage} from './pages/welcome/welcome';
-import {OrderListPage} from './pages/order-list/order-list';
-import {AccountListPage} from './pages/account-list/account-list';
-import {OrderService} from './services/order-service';
-import {AccountService} from './services/account-service';
+import {PropertyListPage} from './pages/property-list/property-list';
+import {BrokerListPage} from './pages/broker-list/broker-list';
+import {FavoriteListPage} from './pages/favorite-list/favorite-list';
+import {PropertyService} from './services/property-service';
+import {BrokerService} from './services/broker-service';
 
 @App({
     templateUrl: 'build/app.html',
@@ -16,7 +17,7 @@ import {AccountService} from './services/account-service';
     queries: {
         nav: new ViewChild('content')
     },
-    providers: [HTTP_PROVIDERS, OrderService, AccountService]
+    providers: [HTTP_PROVIDERS, PropertyService, BrokerService]
 })
 class MyApp {
 
@@ -30,8 +31,9 @@ class MyApp {
 
         this.pages = [
             {title: 'Welcome', component: WelcomePage, icon: "bookmark"},
-            {title: 'Orders', component: OrderListPage, icon: "home"},
-            {title: 'Accounts', component: AccountListPage, icon: "people"}
+            {title: 'Properties', component: PropertyListPage, icon: "home"},
+            {title: 'Brokers', component: BrokerListPage, icon: "people"},
+            {title: 'Favorites', component: FavoriteListPage, icon: "star"}
         ];
 
         this.rootPage = WelcomePage;

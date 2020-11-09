@@ -6,16 +6,20 @@ import 'rxjs/Rx';
  Prettify objects returned from Salesforce. This is optional, but it allows us to keep the templates independent
  from the Salesforce specific naming convention. This could also be done Salesforce-side by creating a custom REST service.
  */
-let prettifyAccount = (account) => {
+let prettifyBroker = (broker) => {
     return {
-        id: account.sfid,
-        name: account.name,
-        accountNumber: account.accountNumber
+        id: broker.sfid,
+        name: broker.name,
+        title: broker.title__c,
+        picture: broker.picture__c,
+        phone: broker.phone__c,
+        mobilePhone: broker.mobile_phone__c,
+        email: broker.email__c
     };
 };
 
 @Injectable()
-export class AccountService {
+export class BrokerService {
 
     static get parameters() {
         return [Http];
@@ -26,11 +30,11 @@ export class AccountService {
     }
 
     findAll() {
-        return this.http.get('/account').map(response => response.json().map(prettifyAccount));
+        return this.http.get('/broker').map(response => response.json().map(prettifyBroker));
     }
 
     findById(id) {
-        return this.http.get('/account/' + id).map(response => prettifyAccount(response.json()));
+        return this.http.get('/broker/' + id).map(response => prettifyBroker(response.json()));
     }
 
 }

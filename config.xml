@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.heroku.orders" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>Order</name>
-  <description>Orders Mobile App built on Salesforce Platform</description>
+<widget id="com.heroku.dreamhouzz" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>DreamHouzz</name>
+  <description>DreamHouzz Mobile App built on Salesforce Platform</description>
   <author email="ccoenraets@salesforce.com" href="http://coenraets.org/">Christophe Coenraets</author>
   <content src="index.html"/>
   <access origin="*"/>
