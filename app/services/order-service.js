@@ -6,8 +6,9 @@ import 'rxjs/Rx';
     Prettify objects returned from Salesforce. This is optional, but it allows us to keep the templates independent
     from the Salesforce specific naming convention. This could also be done Salesforce-side by creating a custom REST service.
  */
+
 let prettifyOrder = (order) => {
-    let prettyOrder = {
+    let prettifyOrder = {
         id: order.sfid,
         orderid: order.order_id__c,
         name: order.name,
@@ -20,7 +21,8 @@ let prettifyOrder = (order) => {
         {
             id: order.account__c_sfid,
             name: order.account__c_name,
-            number: order.account__c_accountnumber
+            number: order.account__c_accountnumber,
+            firstName: order.account__c_firstname
         } : {};
     return prettifyOrder;
 };
