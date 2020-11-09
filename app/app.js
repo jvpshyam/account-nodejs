@@ -15,6 +15,9 @@ import {ProductListPage} from './pages/product-list/product-list';
 import {AccountService} from './services/account-service';
 import {AccountListPage} from './pages/account-list/account-list';
 
+import {OrderService} from './services/order-service';
+import {OrderListPage} from './pages/order-list/order-list';
+
 @App({
     templateUrl: 'build/app.html',
     config: {
@@ -23,7 +26,7 @@ import {AccountListPage} from './pages/account-list/account-list';
     queries: {
         nav: new ViewChild('content')
     },
-    providers: [HTTP_PROVIDERS, PropertyService, BrokerService, ProductService, AccountService]
+    providers: [HTTP_PROVIDERS, PropertyService, BrokerService, ProductService, AccountService, OrderService]
 })
 class MyApp {
 
@@ -41,7 +44,8 @@ class MyApp {
             {title: 'Brokers', component: BrokerListPage, icon: "people"},
             {title: 'Favorites', component: FavoriteListPage, icon: "star"},
             {title: 'Account', component: AccountListPage, icon: "star"},
-            {title: 'Product', component: ProductListPage, icon: "star"}
+            {title: 'Product', component: ProductListPage, icon: "star"},
+            {title: 'Order', component: OrderListPage, icon: "star"}
         ];
 
         this.rootPage = WelcomePage;

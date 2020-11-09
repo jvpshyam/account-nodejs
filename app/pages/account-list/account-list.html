@@ -9,7 +9,6 @@
     <ion-list>
         <button ion-item *ngFor="let account of accounts" (click)="itemTapped($event, account)">
             <h2>{{account.name}}</h2>
-            <p>{{account.number}}</p>
         </button>
     </ion-list>
 </ion-content>
