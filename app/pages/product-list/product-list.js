@@ -18,6 +18,7 @@ export class ProductListPage {
     }
 
     ngOnInit() {
+        console.log('calling productService findAll');
         this.productService.findAll().subscribe(products => this.products = products);
     }
 

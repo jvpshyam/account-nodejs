@@ -9,7 +9,7 @@
     <ion-list>
         <button ion-item *ngFor="Products" (click)="itemTapped($event, product)">
             <h2>{{product.name}}</h2>
-            <p>{{product.code}}</p>
+            <p>{{product.description}}, {{product.model}}</p>
         </button>
     </ion-list>
 </ion-content>

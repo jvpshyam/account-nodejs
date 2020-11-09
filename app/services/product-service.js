@@ -10,7 +10,6 @@ let prettifyProduct = (product) => {
     return {
         id: product.sfid,
         name: product.name,
-        code: product.productcode,
         description:product.description,
         model:product.model__c
     };
@@ -28,6 +27,7 @@ export class ProductService {
     }
 
     findAll() {
+        console.log('Inside product findAll');
         return this.http.get('/product').map(response => response.json().map(prettifyProduct));
     }
 
