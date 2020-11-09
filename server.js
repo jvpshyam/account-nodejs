@@ -51,6 +51,12 @@ app.get('/product', function(req, res) {
   });
 });
 
+app.get('/product/:sfid', function(req, res) {
+  client.query('SELECT * FROM ' + productTable + ' WHERE sfid = $1', [req.params.sfid], function(error, data) {
+    res.json(data.rows[0]);
+  });
+});
+
 
 app.get('/property', function(req, res) {
   client.query('SELECT * FROM ' + propertyTable, function(error, data) {
