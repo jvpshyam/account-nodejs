@@ -8,7 +8,7 @@ import 'rxjs/Rx';
  */
 
 let prettifyOrder = (order) => {
-    let prettifyOrder = {
+    let prettyOrder = {
         id: order.sfid,
         orderid: order.order_id__c,
         name: order.name,
@@ -20,10 +20,10 @@ let prettifyOrder = (order) => {
         {
             id: order.account__c_sfid,
             name: order.account__c_name,
-            number: order.account__c_accountnumber,
+            accountNumber: order.account__c_accountnumber,
             firstName: order.account__c_firstname
         } : {};
-    return prettifyOrder;
+    return prettyOrder;
 };
 
 
