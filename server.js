@@ -26,7 +26,7 @@ var brokerTable = 'broker__c';
 var productTable = 'product2';
 
 // setup the demo data if needed
-client.query('SELECT * FROM salesforce.broker__c', function(error, data) {
+client.query('SELECT * FROM broker__c', function(error, data) {
   if (error !== null) {
     console.log('Loading Data from broker__c...');
     client.query('SELECT * FROM broker__c', function(error, data) {
