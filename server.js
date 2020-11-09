@@ -24,6 +24,7 @@ var propertyTable = 'property__c';
 var favoriteTable = 'favorite__c';
 var brokerTable = 'broker__c';
 var productTable = 'product2';
+var accountTable = 'account';
 
 // setup the demo data if needed
 client.query('SELECT * FROM broker__c', function(error, data) {
@@ -45,6 +46,7 @@ client.query('SELECT * FROM broker__c', function(error, data) {
     favoriteTable = schema + 'favorite__c';
     brokerTable = schema + 'broker__c';
     productTable = schema + 'product2';
+    accountTable = schema + 'account';
   }
 });
 
@@ -56,6 +58,18 @@ app.get('/product', function(req, res) {
 
 app.get('/product/:sfid', function(req, res) {
   client.query('SELECT * FROM ' + productTable + ' WHERE sfid = $1', [req.params.sfid], function(error, data) {
+    res.json(data.rows[0]);
+  });
+});
+
+app.get('/account', function(req, res) {
+  client.query('SELECT * FROM ' + accountTable, function(error, data) {
+    res.json(data.rows);
+  });
+});
+
+app.get('/account/:sfid', function(req, res) {
+  client.query('SELECT * FROM ' + accountTable + ' WHERE sfid = $1', [req.params.sfid], function(error, data) {
     res.json(data.rows[0]);
   });
 });
