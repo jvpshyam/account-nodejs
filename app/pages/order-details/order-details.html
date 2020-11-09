@@ -10,24 +10,34 @@
         <ion-card>
             <ion-card-content>
                 <h2 class="card-title">
-                    {{order.id}}
+                    {{order.name}}
                 </h2>
                 <p>
-                    {{order.name}}
-                </p>
-                <p>
-                    {{order.amount}}
-                </p>
-                <p>
-                    {{order.currency}}
-                </p>
-                <p>
-                    {{order.startDate}}
-                </p>
-                <p>
-                    {{order.endDate}}
+                    {{order.id}}
                 </p>
             </ion-card-content>
+            <ion-list>
+                <ion-item>
+                    <ion-icon item-left name="amount"></ion-icon>
+                    <h3>Amount</h3>
+                    <ion-note item-right>{{order.amount}}</ion-note>
+                </ion-item>
+                <ion-item>
+                    <ion-icon item-left name="startDate"></ion-icon>
+                    <h3>Start Date</h3>
+                    <ion-note item-right> {{order.startDate}}</ion-note>
+                </ion-item>
+                <ion-item>
+                    <ion-icon item-left name="endDate"></ion-icon>
+                    <h3>End Date</h3>
+                    <ion-note item-right>{{order.endDate}}</ion-note>
+                </ion-item>
+                <button ion-item (click)="showAccount($event, order.account)">
+                    <h2>{{order.account.name}}</h2>
+                    <p>{{order.account.firstName}}</p>
+                    <p>{{order.account.accountNumber}}</p>
+                </button>
+            </ion-list>
         </ion-card>
     </div>
 </ion-content>
