@@ -1,10 +1,10 @@
 {
-  "name": "dreamhouse-web-app",
-  "description": "DreamHouse Web App",
+  "name": "orders-web-app",
+  "description": "Orders Web App",
   "keywords": [
     "app-cloud"
   ],
-  "repository": "https://github.com/jvpshyam/intro-to-heroku",
+  "repository": "https://github.com/jvpshyam/account-nodejs",
   "addons": [
     "heroku-postgresql"
   ]
