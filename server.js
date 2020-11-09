@@ -37,6 +37,8 @@ client.query('SELECT * FROM salesforce.broker__c', function(error, data) {
     });
   }
   else {
+    console.log('Loading Data from postgres...');
+    console.log('Connection url' + connectionString);
     var schema = 'salesforce.';
     propertyTable = schema + 'property__c';
     favoriteTable = schema + 'favorite__c';
