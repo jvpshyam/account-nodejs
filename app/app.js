@@ -9,6 +9,9 @@ import {FavoriteListPage} from './pages/favorite-list/favorite-list';
 import {PropertyService} from './services/property-service';
 import {BrokerService} from './services/broker-service';
 
+import {ProductService} from './services/product-service';
+import {ProductListPage} from './pages/product-list/product-list';
+
 @App({
     templateUrl: 'build/app.html',
     config: {
@@ -17,7 +20,7 @@ import {BrokerService} from './services/broker-service';
     queries: {
         nav: new ViewChild('content')
     },
-    providers: [HTTP_PROVIDERS, PropertyService, BrokerService]
+    providers: [HTTP_PROVIDERS, PropertyService, BrokerService, ProductService]
 })
 class MyApp {
 
@@ -34,6 +37,7 @@ class MyApp {
             {title: 'Properties', component: PropertyListPage, icon: "home"},
             {title: 'Brokers', component: BrokerListPage, icon: "people"},
             {title: 'Favorites', component: FavoriteListPage, icon: "star"}
+            {title: 'Product', component: ProductListPage, icon: "star"}
         ];
 
         this.rootPage = WelcomePage;
