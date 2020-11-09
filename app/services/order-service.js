@@ -13,7 +13,6 @@ let prettifyOrder = (order) => {
         orderid: order.order_id__c,
         name: order.name,
         amount: order.order_amount__c,
-        currency: order.currency_code__c,
         startDate: order.order_start_date__c,
         endDate: order.order_end_date__c
     };
