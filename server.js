@@ -54,7 +54,8 @@ client.query('SELECT * FROM broker__c', function(error, data) {
 
 app.get('/order', function(req, res) {
   client.query('SELECT * FROM ' + orderTable, function(error, data) {
-    res.json(data.rows[0]);
+    console.log(data.rows);
+    res.json(data.rows);
   });
 });
 
