@@ -14,7 +14,8 @@ let prettifyProduct = (product) => {
         description: product.description,
         model: product.model__c,
         detail: product.detail__c,
-        price: product.price__c
+        price: product.price__c,
+        image: product.purl__c
     };
 };
 

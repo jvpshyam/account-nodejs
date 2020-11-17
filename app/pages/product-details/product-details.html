@@ -11,10 +11,35 @@
             <ion-card-content>
                 <h2>{{product.name}}</h2>
                 <h2>{{product.description}}</h2>
-                <h2>{{product.model}}</h2>
-                <h2>{{product.detail}}</h2>
-                <h2>{{product.price}}</h2>
             </ion-card-content>
+            <ion-list>
+                <ion-item>
+                    <ion-icon item-left name="model"></ion-icon>
+                    <h3>Model</h3>
+                    <ion-note item-right>{{product.model}}</ion-note>
+                </ion-item>
+                <ion-item>
+                    <ion-icon item-left name="detail"></ion-icon>
+                    <h3>Details</h3>
+                    <ion-note item-right> {{product.detail}}</ion-note>
+                </ion-item>
+                <ion-item>
+                    <ion-icon item-left name="price"></ion-icon>
+                    <h3>Price</h3>
+                    <ion-note item-right>{{product.price}}</ion-note>
+                </ion-item>
+                <ion-item>
+                    <ion-icon item-left name="price"></ion-icon>
+                    <h3>Price</h3>
+                    <ion-note item-right>{{product.price}}</ion-note>
+                </ion-item>
+                <button ion-item>
+                    <ion-avatar item-left>
+                        <img src="{{product.image}}"/>
+                    </ion-avatar>
+                    <h2>{{product.name}}</h2>
+                </button>
+            </ion-list>
         </ion-card>
     </div>
 </ion-content>
