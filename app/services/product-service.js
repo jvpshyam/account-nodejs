@@ -15,6 +15,7 @@ let prettifyProduct = (product) => {
         model: product.model__c,
         detail: product.detail__c,
         price: product.price__c,
+        priceFormatted: "$" + product.price__c.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
         image: product.purl__c
     };
 };
