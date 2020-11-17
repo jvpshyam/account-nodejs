@@ -10,7 +10,6 @@
         <ion-card>
             <ion-card-content>
                 <h2>{{product.name}}</h2>
-                <h2>{{product.description}}</h2>
             </ion-card-content>
             <ion-list>
                 <ion-item>
@@ -19,14 +18,9 @@
                     <ion-note item-right>{{product.model}}</ion-note>
                 </ion-item>
                 <ion-item>
-                    <ion-icon item-left name="detail"></ion-icon>
-                    <h3>Details</h3>
-                    <ion-note item-right> {{product.detail}}</ion-note>
-                </ion-item>
-                <ion-item>
-                    <ion-icon item-left name="price"></ion-icon>
-                    <h3>Price</h3>
-                    <ion-note item-right>{{product.price}}</ion-note>
+                    <ion-icon item-left name="description"></ion-icon>
+                    <h3>Description</h3>
+                    <ion-note item-right> {{product.description}}</ion-note>
                 </ion-item>
                 <ion-item>
                     <ion-icon item-left name="price"></ion-icon>
@@ -37,7 +31,6 @@
                     <ion-avatar item-left>
                         <img src="{{product.image}}"/>
                     </ion-avatar>
-                    <h2>{{product.name}}</h2>
                 </button>
             </ion-list>
         </ion-card>
