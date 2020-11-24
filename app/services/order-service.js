@@ -53,7 +53,7 @@ export class OrderService {
     updateOrder(order) {
         var headers = new Headers();
         headers.append('Content-Type', 'application/json');
-        return this.http.put('/order', JSON.stringify({ 'name': order.name+1 }), {headers: headers});
+        return this.http.put('/order' + order.id, JSON.stringify({ 'name': order.name+1 }), {headers: headers});
     }
 
 }
