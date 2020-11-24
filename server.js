@@ -65,6 +65,13 @@ app.get('/order/:sfid', function(req, res) {
   });
 });
 
+app.put('/order/:sfid', function(req, res) {
+  client.query('UPDATE ' + orderTable + ' SET name = $1 WHERE sfid = $2', [req.body.name] ,[req.params.sfid], function(error, data) {
+    console.log(data);
+    res.json(data);
+  });
+});
+
 app.get('/product', function(req, res) {
   client.query('SELECT * FROM ' + productTable, function(error, data) {
     res.json(data.rows);
@@ -114,6 +121,7 @@ app.post('/favorite', function(req, res) {
     res.json(data);
   });
 });
+
 
 app.delete('/favorite/:sfid', function(req, res) {
   client.query('DELETE FROM ' + favoriteTable + ' WHERE sfid = $1', [req.params.sfid], function(error, data) {
