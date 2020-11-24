@@ -72,6 +72,12 @@ app.put('/order/:sfid', function(req, res) {
   });
 });
 
+app.delete('/order/:sfid', function(req, res) {
+  client.query('DELETE FROM ' + orderTable + ' WHERE sfid = $1', [req.params.sfid], function(error, data) {
+    res.json(data);
+  });
+});
+
 app.get('/product', function(req, res) {
   client.query('SELECT * FROM ' + productTable, function(error, data) {
     res.json(data.rows);
