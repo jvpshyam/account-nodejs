@@ -36,4 +36,17 @@ export class OrderDetailsPage {
 
     }
 
+    updateOrder(event, order) {
+
+        this.orderService.updateOrder(order).subscribe(() => {
+            let alert = Alert.create({
+                title: 'Order',
+                subTitle: 'Order getting updated',
+                buttons: ['OK']
+            });
+            this.nav.present(alert);
+        });
+
+    }
+
 }

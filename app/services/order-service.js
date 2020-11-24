@@ -50,4 +50,10 @@ export class OrderService {
         return this.http.delete('/order/' + order.id);
     }
 
+    updateOrder(order) {
+        var headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        return this.http.put('/order', JSON.stringify({ 'name': order.name+1 }), {headers: headers});
+    }
+
 }
