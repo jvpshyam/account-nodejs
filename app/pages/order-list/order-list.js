@@ -21,6 +21,19 @@ export class OrderListPage {
         this.orderService.findAll().subscribe(orders => this.orders = orders);
     }
 
+    deleteOrder(event, order) {
+
+        this.orderService.delete(order).subscribe(() => {
+            let alert = Alert.create({
+                title: 'Order',
+                subTitle: 'Order deleting',
+                buttons: ['OK']
+            });
+            this.nav.present(alert);
+        });
+
+    }
+
     itemTapped(event, order) {
         this.nav.push(OrderDetailsPage, {
             order: order

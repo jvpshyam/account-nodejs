@@ -46,4 +46,8 @@ export class OrderService {
         return this.http.get('/order/' + id).map(response => prettifyOrder(response.json()));
     }
 
+    delete(order) {
+        return this.http.delete('/order/' + order.id);
+    }
+
 }
