@@ -23,4 +23,17 @@ export class OrderDetailsPage {
         this.orderService.findById(this.order.id).subscribe(order => this.order = order);
     }
 
+    deleteOrder(event, order) {
+
+        this.orderService.delete(order).subscribe(() => {
+            let alert = Alert.create({
+                title: 'Order',
+                subTitle: 'Order deleting',
+                buttons: ['OK']
+            });
+            this.nav.present(alert);
+        });
+
+    }
+
 }
