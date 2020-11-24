@@ -10,10 +10,10 @@
         <button ion-item *ngFor="let order of orders" (click)="itemTapped($event, order)">
             <h2>{{order.name}}</h2>
             <p>{{order.amount}}, {{order.currency}}</p>
-        </button>
-        <button clear small (click)="deleteOrder($event, order)">
-            <ion-icon name="star"></ion-icon>
-            Delete
+            <button clear small (click)="deleteOrder($event, order)">
+                <ion-icon name="star"></ion-icon>
+                Delete
+            </button>
         </button>
     </ion-list>
 </ion-content>
